@@ -1,4 +1,3 @@
-{-# LANGUAGE LambdaCase #-}
 import Data.List
 import Data.Char
 
@@ -21,7 +20,6 @@ getCharacterValue c
     | isAsciiLower c    = ord c - ord 'a' + 1
     | isAsciiUpper c    = ord c - ord 'A' + 27
     | otherwise         = error "Invalid Characters!"
-
 
 getCharacterSum :: [Char] -> Int
 getCharacterSum = sum . map getCharacterValue

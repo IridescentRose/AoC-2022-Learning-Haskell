@@ -19,10 +19,8 @@ getCharacterValue c
     | isAsciiUpper c    = ord c - ord 'A' + 27
     | otherwise         = error "Invalid Characters!"
 
-
 getCharacterSum :: [[Char]] -> Int
 getCharacterSum = sum . map (sum . map getCharacterValue)
-
 
 main :: IO ()
 main = do
